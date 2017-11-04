@@ -20,7 +20,14 @@ public class Shop {
         stock.add(stockItem);
     }
 
-   // TODO: add delete method
+    public int getStockLength() {
+        return stock.size();
+    }
+
+    public void deleteStock(Sellable stockItem){
+        stock.remove(stockItem);
+    }
+
 }
 
 
