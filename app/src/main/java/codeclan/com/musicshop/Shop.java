@@ -28,6 +28,25 @@ public class Shop {
         stock.remove(stockItem);
     }
 
+    public double getTotalPotentialProfitOfStock(){
+        double totalProfit = 0;
+
+        for (Sellable stockItem: stock){
+            totalProfit += stockItem.getMarkUp(stockItem.getSellPrice(), stockItem.getBuyPrice());
+        }
+        return totalProfit;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 

@@ -7,4 +7,8 @@ package codeclan.com.musicshop.behaviours;
 public interface Sellable {
 
     double getMarkUp(double sellPrice, double buyPrice);
+
+    double getSellPrice();
+
+    double getBuyPrice();
 }

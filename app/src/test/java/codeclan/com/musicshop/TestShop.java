@@ -65,4 +65,12 @@ public class TestShop {
         shop.deleteStock(ukulele);
         assertEquals(1, shop.getStockLength());
     }
+
+    @Test
+    public void canGetTotalPotentialProfitValueOfCurrentStock(){
+        shop.addStock(ukulele);
+        shop.addStock(ukulele);
+        shop.addStock(guitarStrings);
+        assertEquals(52.49, shop.getTotalPotentialProfitOfStock(), 0.01);
+    }
 }
