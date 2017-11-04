@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import codeclan.com.musicshop.accessories.guitarAccessories.GuitarStrings;
 import codeclan.com.musicshop.behaviours.Sellable;
 import codeclan.com.musicshop.instruments.StringInstrument;
+import codeclan.com.musicshop.instruments.StringInstrumentType;
 
 import static junit.framework.Assert.assertEquals;
 
@@ -26,7 +27,7 @@ public class TestShop {
     @Before
     public void before() {
         guitarStrings = new GuitarStrings("Electric guitar strings", 4.50, 7.99);
-        ukulele = new StringInstrument("Ukulele", 50.50, 75.00, 4, "Strum");
+        ukulele = new StringInstrument(StringInstrumentType.UKULELE, 50.50, 75.00, 4, "Strum");
 //        ArrayList<Sellable> stock = new ArrayList<>();
         stock = new ArrayList<Sellable>();
         shop = new Shop(stock);

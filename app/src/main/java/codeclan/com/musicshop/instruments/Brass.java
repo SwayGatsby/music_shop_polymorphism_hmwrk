@@ -5,21 +5,26 @@ package codeclan.com.musicshop.instruments;
  */
 
 public class Brass extends Instrument {
-    private String type;
+    BrassInstrumentType type;
+    private String family;
 
-    public Brass(String name, double buyPrice, double sellPrice, String type) {
-        super(name, buyPrice, sellPrice);
+    public Brass(BrassInstrumentType type, double buyPrice, double sellPrice, String family) {
+        super(buyPrice, sellPrice);
         this.type = type;
+        this.family = family;
     }
 
     public String play(){
         return "Brass sound";
     }
 
-    public String canGetType() {
-        return this.type;
+    public String getFamily() {
+        return this.family;
     }
 
+    public BrassInstrumentType getInstrumentName(){
+        return this.type;
+    }
 
 }
 

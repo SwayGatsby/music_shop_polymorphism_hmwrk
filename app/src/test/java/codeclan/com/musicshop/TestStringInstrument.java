@@ -3,6 +3,7 @@ package codeclan.com.musicshop;
 import org.junit.Before;
 import org.junit.Test;
 import codeclan.com.musicshop.instruments.StringInstrument;
+import codeclan.com.musicshop.instruments.StringInstrumentType;
 
 import static junit.framework.Assert.assertEquals;
 
@@ -15,12 +16,12 @@ public class TestStringInstrument {
 
     @Before
     public void before(){
-        ukulele = new StringInstrument("Ukulele", 30.50, 60.00, 4, "Strum");
+        ukulele = new StringInstrument(StringInstrumentType.UKULELE,30.50, 60.00, 4, "Strum");
     }
 
     @Test
-    public void canGetName(){
-        assertEquals("Ukulele", ukulele.getName());
+    public void canGetType(){
+        assertEquals(StringInstrumentType.UKULELE, ukulele.getType());
     }
 
     @Test

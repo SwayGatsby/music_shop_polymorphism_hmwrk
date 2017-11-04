@@ -8,18 +8,12 @@ import codeclan.com.musicshop.behaviours.Sellable;
  */
 
 public abstract class Instrument implements Playable, Sellable {
-    protected String name;
     protected double buyPrice;
     protected double sellPrice;
 
-    public Instrument(String name, double buyPrice, double sellPrice){
-        this.name = name;
+    public Instrument(double buyPrice, double sellPrice){
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
-    }
-
-    public String getName(){
-        return this.name;
     }
 
     public double getBuyPrice(){

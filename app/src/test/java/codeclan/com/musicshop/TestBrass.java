@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import codeclan.com.musicshop.instruments.Brass;
+import codeclan.com.musicshop.instruments.BrassInstrumentType;
 
 import static junit.framework.Assert.assertEquals;
 
@@ -16,7 +17,7 @@ public class TestBrass{
 
     @Before
         public void before(){
-        trombone = new Brass("Trombone", 60.60, 80.00, "Slide");
+        trombone = new Brass(BrassInstrumentType.TROMBONE,60.60, 80.00, "Slide");
     }
 
     @Test
@@ -26,7 +27,7 @@ public class TestBrass{
 
     @Test
     public void canGetName(){
-            assertEquals("Trombone", trombone.getName());
+            assertEquals(BrassInstrumentType.TROMBONE, trombone.getInstrumentName());
     }
 
     @Test
@@ -41,7 +42,7 @@ public class TestBrass{
 
     @Test
     public void canGetType(){
-        assertEquals("Slide", trombone.canGetType());
+        assertEquals("Slide", trombone.getFamily());
     }
 
     @Test

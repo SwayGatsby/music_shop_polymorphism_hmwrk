@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertEquals;
  * Created by user on 04/11/2017.
  */
 
-public class OilTest {
+public class TestOil {
 
     Oil slideOil;
 
